@@ -1,0 +1,66 @@
+1. What are anonymous functions in JavaScript?
+In JavaScript, an anonymous function is a function that does not have a name. Anonymous functions can be defined and used inline, without assigning them to a variable. They are often used as arguments to other functions or as callbacks in event listeners.
+Here's an example of an anonymous function used as an argument to the setTimeout function:
+        setTimeout(function() {
+        console.log('This is an anonymous function!');
+        }, 1000);
+
+2. Explain strict comparison and Abstract comparison in javascript?
+In JavaScript, there are two types of comparison: strict comparison and abstract comparison.
+
+Strict comparison, also known as "triple equals" (===), compares two values for equality without type coercion. This means that the values must be of the same type to be considered equal. For example:
+    console.log(5 === 5); // true
+    console.log(5 === "5"); // false
+Abstract comparison, also known as "double equals" (==), compares two values for equality with type coercion. This means that the values may be of different types, but if they can be converted to the same type, they will be considered equal. For example:
+    console.log(5 == 5); // true
+    console.log(5 == "5"); // true
+
+3. Difference b/w arrow functions and regular functions?
+Arrow functions and regular functions are both used to define functions in JavaScript, but they differ in their syntax and behavior in some ways.
+Syntax:
+The syntax for arrow functions is more concise and shorter than regular functions. Arrow functions are defined using the "=>" operator, whereas regular functions are defined using the "function" keyword.
+Example of Arrow Function:
+    const sum = (a, b) => a + b;
+Example of Regular Function:
+    function sum(a, b) {
+        return a + b;
+    }
+
+Arrow functions do not have their own "this" keyword. Instead, they use the "this" keyword from the surrounding context (lexical this). Regular functions, on the other hand, have their own "this" keyword.
+Arrow functions do not have their own "arguments" object. Regular functions have their own "arguments" object.
+
+4. What is Hoisting in JavaScript?
+Hoisting is a JavaScript behavior where variables and function declarations are moved to the top of their respective scopes during the compilation phase before code execution. This means that you can use a variable or a function before it has been declared in the code.
+However, it's important to note that only the declarations are hoisted, not the initializations. So, if you try to use a variable before it has been initialized, it will have the value of undefined.
+
+5. JavaScript is a garbage collected programming language, explain how?
+JavaScript is a garbage collected programming language, which means that it automatically frees up memory that is no longer being used by a program. This is done through a process called garbage collection.
+In JavaScript, when a variable or object is no longer being referenced by any part of the program, the garbage collector will identify it as "garbage" and mark it for deletion. The memory occupied by the garbage will then be freed up for reuse.
+Garbage collection can have some performance overhead, since the garbage collector needs to periodically scan the program's memory to identify and delete unused variables and objects.
+
+6. Explain Shallow copy vs Deep copy in Javascript?
+Shallow copy:
+A shallow copy of an object or an array creates a new object or array, but the references to the values are copied rather than the actual values themselves. So, if we modify the values in the original object or array, the changes will be reflected in the copied object or array as well. Shallow copying is done using the Object.assign() method or the spread operator (...).
+Deep copy:
+A deep copy of an object or an array creates a new object or array, and also copies all nested objects and arrays recursively. So, any changes made to the original object or array will not affect the copied object or array. Deep copying can be done using the JSON.parse() and JSON.stringify() methods or by using external libraries like Lodash.
+
+7. What is Object.freeze
+Object.freeze() is a method in JavaScript that freezes an object, making it immutable. When an object is frozen, its properties cannot be added, deleted, or modified. Any attempt to modify the frozen object will fail silently, without throwing any error.
+Object.freeze() creates a shallowly frozen copy of an object, which means that any properties that are objects themselves will still be mutable. In order to freeze nested objects, you need to apply Object.freeze() recursively to each object property.
+
+1. Write a function that generates a random number between two ranges, -100 to 0 and 800 - 900
+        
+        function randomInTwoRange(min1, max1, min2, max2) {
+        
+        const num1 = Math.floor(Math.random() * (max1 - min1 + 1) + min1);
+
+       
+        const num2 = Math.floor(Math.random() * (max2 - min2 + 1) + min2);
+
+      
+        return Math.random() < 0.5 ? num1 : num2;
+        }
+        const randomNum = randomInTwoRange(-100, 0, 800, 900);
+        console.log(randomNum); 
+
+

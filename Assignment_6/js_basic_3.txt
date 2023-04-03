@@ -1,0 +1,180 @@
+1. Explain as much as you know about objects in javascript? 
+Ans In JavaScript, an object is a data structure that allows you to store key-value pairs. Objects are used to represent real-world entities or concepts, such as a person, a car, or a bank account. Objects in JavaScript are dynamic, meaning that you can add, modify, or delete properties and methods at any time.
+Objects in JavaScript are created using curly braces {} and properties are defined as key-value pairs separated by a colon. 
+You can access the properties of an object using dot notation or bracket notation. 
+You can also add or modify properties of an object at any time.In addition to properties, an object in JavaScript can have methods. A method is simply a function that is defined as a property of an object.
+In summary, objects in JavaScript are a powerful data structure that allows you to represent complex data and behavior. They are dynamic and can be modified at any time. Properties can be accessed using dot notation or bracket notation, and methods can be defined as functions that are properties of an object.
+
+
+2.Can you make a “class” based alternative to it? Using Javascript OOP features.
+Yes,
+    class Vector {
+    constructor(x, y) {
+        this._x = x;
+        this._y = y;
+    }
+
+    get x() {
+        return this._x;
+    }
+
+    set x(value) {
+        this._x = value;
+    }
+
+    get y() {
+        return this._y;
+    }
+
+    set y(value) {
+        this._y = value;
+    }
+
+    static create(x, y) {
+        return new Vector(x, y);
+    }
+    }
+    const v = new Vector(1, 2);
+
+3. Do you think javascript is the language of the future?
+
+JavaScript is currently one of the most widely used programming languages in the world, and it's used extensively in web development, mobile app development, game development, and many other areas. With the increasing demand for web-based applications, JavaScript's popularity is expected to continue to rise.
+Moreover, with the advent of technologies like Node.js and frameworks such as React, Angular, and Vue, JavaScript is being used for both front-end and back-end development, making it a versatile language.
+In conclusion, given its versatility, widespread adoption, and continued development, it's reasonable to assume that JavaScript will continue to be an important language in the future. However, it's also important to note that the field of programming is constantly evolving, and new languages and technologies may emerge that could compete with JavaScript.
+
+1.
+Write code implementations of arr methods -
+a. forEach
+b. map
+c. filter
+d. reduce
+e. includes
+f. some
+g. every
+
+
+    const nums = [1, 2, 3, 4, 5];
+
+    // forEach method
+    console.log("Using forEach method:");
+    nums.forEach(num => console.log(num));
+
+    // map method
+    console.log("\nUsing map method:");
+    const squaredNums = nums.map(num => num ** 2);
+    console.log(squaredNums);
+
+    // filter method
+    console.log("\nUsing filter method:");
+    const evenNums = nums.filter(num => num % 2 === 0);
+    console.log(evenNums);
+
+    // reduce method
+    console.log("\nUsing reduce method:");
+    const sum = nums.reduce((acc, curr) => acc + curr);
+    console.log(sum);
+
+    // includes method
+    console.log("\nUsing includes method:");
+    const hasThree = nums.includes(3);
+    console.log(hasThree);
+
+    // some method
+    console.log("\nUsing some method:");
+    const hasEvenNum = nums.some(num => num % 2 === 0);
+    console.log(hasEvenNum);
+
+    // every method
+    console.log("\nUsing every method:");
+    const allEvenNums = nums.every(num => num % 2 === 0);
+    console.log(allEvenNums);
+
+2.Simple Array implementation
+
+        class MyArray {
+        constructor() {
+            this.length = 0;
+            this.data = {};
+        }
+        
+        get(index) {
+            return this.data[index];
+        }
+        
+        push(item) {
+            this.data[this.length] = item;
+            this.length++;
+            return this.length;
+        }
+        
+        pop() {
+            const lastItem = this.data[this.length - 1];
+            delete this.data[this.length - 1];
+            this.length--;
+            return lastItem;
+        }
+        
+        delete(index) {
+            const item = this.data[index];
+            this.shiftItems(index);
+            return item;
+        }
+        
+        }
+3.
+
+            const ToDo = [];
+            const Completed = [];
+
+            function add(title) {
+                if (!title) {
+                    return -1;
+                }
+                const id = ToDo.length + 1;
+                ToDo.push({ id, title });
+                return id;
+            }
+
+            function remove(id) {
+                const index = ToDo.findIndex(task => task.id === id);
+                if (index === -1) {
+                    return false;
+                }
+                ToDo.splice(index, 1);
+                return true;
+            }
+
+            function update(id, title) {
+                const index = ToDo.findIndex(task => task.id === id);
+                if (index === -1) {
+                    return false;
+                }
+                ToDo[index].title = title;
+                return true;
+            }
+
+            function markAsCompleted(id) {
+                const index = ToDo.findIndex(task => task.id === id);
+                if (index === -1) {
+                    return false;
+                }
+                const task = ToDo.splice(index, 1)[0];
+                Completed.push(task);
+                return true;
+            }
+
+            console.log(add('Learn JavaScript'));
+            console.log(add('Buy groceries'));
+            console.log(add('Walk the dog'));
+
+            console.log(remove(2));
+            console.log(remove(5));
+
+            console.log(update(1, 'Learn React'));
+            console.log(update(5, 'Invalid task'));
+
+            console.log(markAsCompleted(3));
+            console.log(markAsCompleted(5));
+
+            console.log(ToDo);
+            console.log(Completed); 

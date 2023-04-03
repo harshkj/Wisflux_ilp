@@ -1,0 +1,247 @@
+.title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    
+}
+.card1{
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+.videoprojects{
+    background: #b517d4;
+}
+.newsletter {
+    color:red;
+    background-image: url("news.png");
+    background-size: 50%;
+}
+.contact-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex;
+    align-content: center;
+    flex: 1;
+    background-color: #f1de71;
+  }
+  .map {
+    display: flex;
+    align-content: center;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .map iframe {
+    border: none;
+    display: flex;
+    flex: 1;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0px 30px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 15px 0px;
+  }
+  
+  .form-field input {
+    font-size: 14px;
+    height: 40px;
+    padding: 0px 15px;
+    border: none;
+  }
+  
+  .form-field label {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0px;
+  }
+  
+  .form-field textarea {
+    height: 100px;
+    border: none;
+    padding: 15px;
+    font-size: 14px;
+  }
+  
+  .form-field button {
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+
+#name {
+    text-transform: uppercase;
+  }
+  
+  #email {
+    text-transform: lowercase;
+  }
+  
+  .form-field button:hover {
+    background-color: #b517d4;
+    color: #ffffff;
+  }
+  
+  .footer-section {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-grow: wrap;
+    flex-wrap: wrap;
+    padding: 30px 10%;
+  }
+  .contact {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+  }
+  
+  .office-address {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 15px;
+    align-content: center;
+  }
+  
+  .office-address h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .office-address p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .contact-us {
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+    align-content: center;
+    flex: 1;
+  }
+  
+  .contact-us h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .contact-us h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .contact-us h3 i {
+    padding-right: 15px;
+  }
+  
+  .social-media {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    flex-flow: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .social-media a span {
+    font-size: 24px;
+    color:rgb(62, 80, 243);
+    padding: 10px;
+  }
+  
+  .social-media a span:hover {
+    color: #b517d4;
+    font-size: 28px;
+  }
+  
+  .quick-link {
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .quick-link h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .quick-link a {
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .quick-link a:hover {
+    color:rgb(62, 80, 243);
+    text-decoration: none;
+  }
+  
+  .top-pointer {
+    position: fixed;
+    bottom: 0;
+    right: -2%;
+  }
+  
+  .top-pointer img {
+    height: 100px;
+    animation: fade 4s infinite;
+  }
+  
+  @keyframes fade {
+    0% { 
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  .top-pointer img:hover {
+    filter: hue-rotate(90deg);
+    opacity: 1;
+    animation: none;
+  }
+  
+  #preloader {
+    position: fixed;
+    background: rgb(0, 0, 0) url(../img/preloder.gif) no-repeat center center;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+  }
+  

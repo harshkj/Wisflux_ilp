@@ -1,0 +1,91 @@
+1. What is JavaScript?
+Ans JavaScript is a client-side scripting language, that is commonly used to create dynamic and interactive web content.
+
+2. What is the difference between b/w let and var?
+Ans var has function-level scope, meaning that variables declared with var are accessible throughout the entire function
+they are declared in, including any nested functions. On the other hand, let has block-level scope, meaning that
+variables declared with let are only accessible within the block they are declared in
+
+3.Why do we prefer const over var?
+Ans const creates a variable that cannot be reassigned to a new value, making it immutable. This can help prevent bugs
+that can arise from accidentally reassigning a variable.
+
+4.What is the use of javascript in web browsers?
+Ans JavaScript in web browsers are used for DOM manipulation,Form validation,Event handling,Asynchronous
+requests,Animation and visual effects
+
+5.What are objects?
+Ans An object is a collection of properties that describe a specific entity or concept.
+
+6.What is an array and how is it different from an Object in Javascript?
+Ans.An array is a special type of object that stores an ordered list of values. An array is similar to an object in that
+it can contain properties and methods, but it has some key differences:It is Ordered ,Index-based,has Length
+property,has built in Array methods
+
+7.What is a function ?
+Ans.A Function is a block of code that performs a specific task and can be called or invoked from other parts of a
+program. Functions can take inputs (called arguments) and return outputs.
+
+8.How can we implement call by value and call by reference in Javascript ?
+Ans.Call by value means that a copy of the value is passed to the function, and any changes made to the copy do not
+affect the original value.Call by reference means that the function receives a reference to the original object or
+array, and any changes made to the object or array within the function affect the original object or array.In
+JavaScript, all primitive types, such as numbers, strings, and booleans, are passed by value, while objects and arrays
+are passed by reference.
+
+9.What are the primitive data types in Javascript?
+Ans.Primitive data types are immutable, which means that their values cannot be changed once they are created. However,
+variables that store primitive values can be reassigned to new values.In JavaScript, there are six primitive data types:
+number,string,boolean,null,undefined,symbol.
+
+10.What is DOM?
+Ans DOM stands for Document Object Model. It is a programming interface for web documents,The DOM is a platform- and
+language-neutral standard that can be used with any programming language, but it is most commonly used with JavaScript
+in web development.
+
+11 Why we need DOM?
+Ans Manipulation of web page content,Access to web page elements,Dynamic styling,Cross-browser compatibility.
+
+
+1. Average of array nums in Javascript?
+
+    const nums = [10, 20, 30, 40, 50];
+    const sum = nums.reduce((total, num) => total + num);
+    const avg = sum / nums.length;
+    console.log(avg); // Output: 30
+
+2. Swap two numbers by reference?
+    let a = 10;
+    let b = 20;
+    console.log(`Before swap: a = ${a}, b = ${b}`);
+
+    [a, b] = [b, a];
+    console.log(`After swap: a = ${a}, b = ${b}`);
+
+3. Print the fibonacci sequence?
+    function fibonacciSeries(n) {
+        let fib = [0, 1];
+        
+        for (let i = 2; i <= n; i++) {
+            fib[i] = fib[i-1] + fib[i-2];
+        }
+
+        return fib;
+    }
+    console.log(fibonacciSeries(10)); 
+  
+4. Sort an array by both ascending and descending order? 
+    const nums = [5, 2, 8, 4, 9, 1];
+
+    const asc = nums.sort((a, b) => a - b);
+    console.log(asc); 
+
+    const desc = nums.sort((a, b) => b - a);
+    console.log(desc); 
+
+5. Show a variable value in an HTML webpage using DOM?
+
+  <script>
+    const name = "Harsh";
+    document.getElementById("output").innerHTML = "Hello, " + name + "!";
+  </script>

@@ -1,0 +1,98 @@
+1. What are the basic data types in TypeScript?
+
+  The basic data types in TypeScript are:
+    boolean: represents a logical value of true or false.
+    number: represents both integer and floating-point numbers.
+    string: represents a sequence of characters, enclosed in single or double quotes.
+    array: represents a collection of values of the same type, denoted by the type followed by [].
+    tuple: represents an array of fixed size with specific types for each position.
+    enum: represents a set of named values.
+    any: represents any data type, including undefined or null.
+    void: represents the absence of any type, used for functions that do not return a value.
+    null: represents an intentional absence of any object value.
+    undefined: represents a value that has not been assigned.
+    never: represents the type of values that never occur, used for functions that always throw an exception or have an infinite loop.
+
+2. What is Generic data type.
+    Generic data type is a way of defining functions or classes in TypeScript that can work with multiple data types without specifying the type explicitly. It allows us to create reusable code that can work with any data type, providing more flexibility and type safety.
+    In TypeScript, we can define generic types using the angle bracket notation <>. For example, the function uses generic type T to return the length of an array of any type.
+
+3. What is type inferring in TS.
+    Type inference is a feature of TypeScript that allows the compiler to automatically deduce the type of a variable, based on its value or how it is used in the code. When we declare a variable without specifying its type, TypeScript tries to infer its type based on the context in which it is used.
+    For example, if we declare a variable x and assign it a value of 5, TypeScript will infer that x is of type number. Similarly, if we declare a function and return a string, TypeScript will infer that the return type of the function is string.
+    Type inference can help reduce the amount of boilerplate code required in a TypeScript project, since developers don't need to specify the type of every variable and function parameter.
+
+4. What are the possible ways to define typing for functions.
+    In TypeScript, there are multiple ways to define typing for functions. Some of them are:
+
+        Explicitly defining function parameter types and return type using : syntax. 
+        Defining function types using type keyword or interface. 
+        Using generic types to create reusable functions that can work with different types of data. 
+        Defining optional or default parameters in functions. 
+
+5. How to define Generic type for Classes.
+    In TypeScript, we can define generic types for classes using the angle bracket syntax <>. Here is an example:
+    class MyArray<T> {
+        private arr: T[] = [];
+
+        push(item: T) {
+            this.arr.push(item);
+        }
+
+        pop(): T | undefined {
+            return this.arr.pop();
+        }
+
+        size(): number {
+            return this.arr.length;
+        }
+    }
+
+    const myArray = new MyArray<number>();
+    myArray.push(1);
+    myArray.push(2);
+    myArray.push(3);
+    console.log(myArray.pop()); 
+    console.log(myArray.size());
+
+    const myStringArray = new MyArray<string>();
+    myStringArray.push("hello");
+    myStringArray.push("world");
+    console.log(myStringArray.pop()); 
+    console.log(myStringArray.size()); 
+
+Program Question
+
+interface Todo {
+  name: string;
+  description: string;
+  done: boolean;
+}
+
+const todos: Todo[] = [];
+
+function add(name: string, description: string): number {
+  const newTodo: Todo = {
+    name: name,
+    description: description,
+    done: false,
+  };
+  todos.push(newTodo);
+  return todos.length;
+}
+
+function remove(index: number): Todo[] {
+  return todos.splice(index, 1);
+}
+
+function list(): void {
+  todos.forEach(function (todo: Todo, index: number) {
+    console.log(`${index} - ${todo.name}`);
+  });
+}
+
+function update(index: number, name: string, description: string): Todo {
+  todos[index].name = name;
+  todos[index].description = description;
+  return todos[index];
+}

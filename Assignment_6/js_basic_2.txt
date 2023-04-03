@@ -1,0 +1,71 @@
+1. Why do we use functions in JavaScript?
+Ans Some important uses of functions are : Code reuse,Abstraction,Organization,Encapsulation,Event handling.
+
+2. What is Function Invocation?
+Ans Function invocation refers to the act of calling, or invoking, a function in JavaScript. When a function is invoked, the code inside the function is executed and any arguments that are passed into the function are processed.
+
+3. Does a function behave like an object in Javascript? Prove it by an example.
+Ans. In JavaScript, functions are considered first-class objects, which means they can be treated like any other object in the language. This means that functions can have properties and methods just like other objects.
+        
+        function func() {
+        console.log("This is my function!");
+        }
+
+        func.propertyy = "Hello, Hey!";
+
+        console.log(func.propertyy); 
+
+
+4. What are Events in Javascript?
+Ans Events are actions or occurrences that happen in the browser or in the user interface of a web application. These events can be triggered by the user, the browser, or by other code running on the page.
+Examples of events:Mouse events,Keyboard events,Form events,Window events
+
+5. What is a string?
+A String is a sequence of characters that is used to represent text. Strings are typically used to store and manipulate text data, such as names, addresses, and messages.
+Strings in JavaScript are surrounded by either single quotes (') or double quotes ("). 
+
+6. What is an array? Is it static or dynamic in Javascript?
+An array is a data structure used to store a collection of elements, such as numbers or strings. Arrays are used to group related data together and can be accessed using an index or a key.
+Arrays in JavaScript are dynamic, which means that their size can be changed at runtime by adding or removing elements.
+7. Difference between Map and Set?
+Map allows you to store and retrieve data based on a key, which can be any value (including objects, functions, and primitives). Map allows duplicate values for keys and maintains the order of insertion.
+Set, on the other hand, is a collection of unique values, where duplicates are not allowed.Set allows you to store and retrieve data, but does not provide a key-value pair. Set maintains the order of insertion.
+
+8. Difference between Array and Map?
+Arrays are ordered lists of values, accessed by index. They are used to store collections of related data, such as a list of names, numbers or objects. Arrays are created with a fixed size, although elements can be added, removed, and updated dynamically.
+Map, on the other hand, is a collection of key-value pairs, where each key is unique and maps to a corresponding value. Maps are used to store data in a way that is easy to look up using a key.
+
+9. What are array methods? List a few names?
+Arrays have several built-in methods that can be used to manipulate and perform operations on the array elements.3
+Some methods are :push(),pop(),slice(),concat(),etc.
+
+10. In how many ways can we traverse through an array in Javascript?
+Some of the most common ways for traversal are :Using a for loop,Using a for...of loop,Using the forEach() method,Using the map() method,Using the filter() method,Using the reduce() method.
+
+
+1. Reverse an array? Input: [1, 2, 3, 4, 5, 6]
+        const arr = [1, 2, 3, 4, 5, 6];
+        arr.reverse();
+        console.log(arr); 
+
+2. Explain the properties of the join array method function via program?
+        const fruits = ["harsh", "sharma", "good", "boy"];
+        const fruitString = fruits.join(", ");
+        console.log(fruitString); 
+
+3. Show all the values of an array in a html webpage using DOM and forEach method?
+        <script>
+            const myArray = ["apple", "banana", "orange", "kiwi"];
+
+            const list = document.getElementById("myList");
+            myArray.forEach(function(item) {
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(item));
+                list.appendChild(li);
+            });
+        </script>
+4. Merge to sets in javascript? (hint use Set class in javascript)
+        const set1 = new Set([1, 2, 3]);
+        const set2 = new Set([3, 4, 5]);
+        const mergedSet = new Set([...set1, ...set2]);
+        console.log(mergedSet); 
