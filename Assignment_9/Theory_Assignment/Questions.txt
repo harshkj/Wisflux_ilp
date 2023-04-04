@@ -1,0 +1,47 @@
+1. What is NodeJS?
+    Node.js is a popular open-source runtime environment that allows developers to use JavaScript on the server-side to build scalable and high-performance applications.
+
+2. What is V8 Engine?
+    The V8 engine is an open-source JavaScript engine developed by Google that powers the Google Chrome web browser, as well as several other applications such as Node.js. It was designed to improve the performance of JavaScript execution by compiling JavaScript code into machine code instead of interpreting it line-by-line.
+    The V8 engine is written in C++ and is highly optimized for performance.
+
+3. What is Event Loop in NodeJS.
+    The event loop is a fundamental concept in Node.js that helps it handle multiple concurrent operations in a non-blocking, asynchronous way. It's a mechanism that allows Node.js to perform I/O operations and respond to events in an efficient manner, without blocking the main thread.
+    The event loop continuously checks the event queue for any new events to process. When an event is detected, it triggers the appropriate callback function and continues to check for new events. 
+
+4. What is the use of tsconfig.json file?
+    The tsconfig.json file is a configuration file used in TypeScript projects to specify compiler options and project settings. It tells the TypeScript compiler how to compile the TypeScript code into JavaScript and can be used to configure various aspects of a project, such as specifying the target version of ECMAScript, enabling or disabling certain TypeScript language features, setting up module resolution options, and more.
+
+5. What are the methods provided by `fs` module to manipulate files?
+    The fs module is a built-in Node.js module that provides file system related functionality, including reading and writing files, manipulating file permissions, and more. Some of the methods provided by the fs module to manipulate files:fs.readFile(),fs.writeFileSync(),fs.appendFileSync(),etc.
+
+6. What is API?
+    API stands for Application Programming Interface, and it is a set of protocols, routines, and tools for building software applications. An API specifies how software components should interact with each other, and provides a way for developers to access and use the functionality of other software systems, libraries, or frameworks.
+    APIs are typically used to enable communication between different software systems or services, allowing them to exchange data and perform actions.
+
+7. What is JSON format?
+    JSON stands for JavaScript Object Notation, and it is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is a text-based format that is widely used for data exchange between web servers and clients, and is also used as a data storage format.
+
+8. Why we use JSON format for API?
+    Some reasons why we use JSON file
+    1) JSON is a lightweight data interchange format that is easy to parse and generate. It uses a simple syntax that is easy for both humans and machines to read and write.
+    2) JSON is easy to parse and generate using most programming languages and frameworks. Most programming languages have built-in support for JSON parsing and generation, which makes it easy to work with JSON data in your code.
+    3) JSON is a web-friendly format that is supported by most web browsers and web servers. It is commonly used for data exchange between web servers and clients, making it a popular choice for building web-based APIs.
+    4) JSON is a human-readable format that is easy to understand and debug. This makes it easy to troubleshoot issues with your API and to communicate with other developers who are working with your API.
+
+9. What is a Framework?
+    A framework is a pre-built software platform that provides a structure and set of tools for developing software applications. Frameworks typically include libraries, APIs, and other tools that make it easier for developers to build and deploy applications by providing pre-built components and functionality that can be used to accelerate development.
+    Frameworks are designed to simplify software development by providing a structured approach to building applications. They typically include pre-built components and tools for common tasks such as user interface design, database integration, and security. This allows developers to focus on building the core functionality of their application, rather than spending time on repetitive tasks.
+
+10. How an HTTP Communication works.
+
+    The client sends a request to the server: When a user enters a URL (Uniform Resource Locator) into their web browser, the browser sends an HTTP request to the web server that hosts the website. The request typically includes the type of request (such as GET, POST, PUT, DELETE), the URL, and any additional data required by the request.
+    The server receives the request: The web server receives the request and processes it. It may need to retrieve data from a database, execute code, or perform other tasks required to fulfill the request.
+    The server sends a response: Once the server has processed the request, it sends an HTTP response back to the client. The response typically includes a status code (such as 200 OK, 404 Not Found, or 500 Internal Server Error), the requested data (such as a webpage, an image, or other content), and any additional data required by the response.
+    The client receives the response: The client receives the HTTP response and processes it. This may involve rendering a webpage, displaying an image, or performing other tasks required to display the requested content.
+    Connection is closed: Once the response has been received and processed, the connection between the client and server is typically closed.
+
+11. What is Middleware in ExpressJS.
+    Middleware in ExpressJS is a function that is executed in the request-response cycle of a web application. It is a fundamental part of the Express framework and allows developers to add functionality to the application by executing code before or after a request is processed by the server.
+    Middleware functions have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. Middleware functions can perform a variety of tasks, including logging, authentication, handling errors, and parsing incoming data.
+    Middleware functions are added to an application using the use method of the Express application object.
