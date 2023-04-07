@@ -23,7 +23,7 @@ const Event = (props) => {
             <small className="text-muted">{name}</small>
           </p>
           <p className="card-text">
-            <small className="text-muted"></small>
+            {message.map((ele)=>{<small className="text-muted">ele.message</small>})}
           </p>
           <a rel="noreferrer" href="" target={"_blank"} className="btn btn-sm btn-dark">
             Click here to browse
